@@ -15,6 +15,7 @@ sudo snap install ghostty --classic
 cp ghostty ~/.config/ghosty/config
 
 # Chrome
+sudo apt intall wget
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome*.deb
 
