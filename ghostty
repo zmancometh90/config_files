@@ -1,0 +1,12 @@
+# Theme
+theme = Seti
+
+# Font
+font-family = Ubuntu Sans Mono
+
+# Background
+background-opacity = 0.80
+background-blur = true
+
+# Window
+maximize = true
