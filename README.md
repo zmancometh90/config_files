@@ -9,6 +9,11 @@ This is a work in progress as I expiriment with a Ubuntu config setup. All comma
 3. [vscode](#vscode)
 4. [Docker](#docker)
 5. [Jetbrains-Toolbox](#jetbrains-toolbox)
+6. [GTK Theme](#gtk)
+7. [Application Dock](#application-dock)
+8. [VLC Media Player](#vlc-media-player)
+9. [Gimp](#gimp)
+10. [Discord](#discord)
 
 ## Ghostty
 
@@ -66,4 +71,54 @@ sudo tar -xvzf ~/Downloads/jetbrains-toolbox-x.xx.xxxx.tar.gz
 # optional but makes it an easier folder name
 sudo mv jetbrains-toolbox-x.xx.xxxx jetbrains
 jetbrains/bin/jetbrains-toolbox
+```
+
+## GTK
+
+Download files here [here](https://draculatheme.com/gtk). Make sure to grab bot the theme and icon theme.
+
+```bash
+sudo apt install gnome-tweaks
+sudo cp -r ~/Downloads/gtk-master /usr/share/themes/
+sudo cp -r /usr/share/themes/gtk-master /usr/share/themes/Dracula
+sudo rm -rf /usr/share/themes/gtk-master
+unzip ~/Downloads/Dracula.zip -d /usr/share/icons/
+gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
+gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+gsettings set org.gnome.desktop.interface icon-theme "Dracula"
+```
+
+After installing set the theme in the gnome-tweaks application and set the themes.
+
+## Application Dock
+
+This is left out of the config.sh script. The command will remove the application dock.
+The dock can always be added if it is not desired.
+
+```bash
+sudo apt remove gnome-shell-extension-ubuntu-dock
+```
+
+To add the dock back:
+
+```bash
+sudo apt install gnome-shell-extension-ubuntu-dock
+```
+
+## VLC Media Player
+
+```bash
+sudo apt install vlc -y
+```
+
+## Gimp
+
+```bash
+sudo apt install gimp -y
+```
+
+## Discord
+
+```bash
+sudo snap install discord -y
 ```
